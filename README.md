@@ -21,13 +21,14 @@ Data citation: Oregon Health Insurance Experiment, public-use data. National Bur
 
 ## Replication check
 
-Effect of Medicaid coverage (two-stage least squares, lottery as instrument), percentage points:
+Percentage points, with 95% confidence intervals. Published values are from the paper's text and Tables 2 and 4.
 
-| Outcome | This analysis | Baicker et al. (2013) |
+| Estimate | This analysis | Baicker et al. (2013) |
 |---|---|---|
-| Lottery's effect on Medicaid enrollment | 24.1 | *to confirm (Table 2)* |
-| Elevated blood pressure | −1.35 (−7.17, 4.48) | not significant; *exact estimate to confirm* |
-| Positive depression screen | −9.15 (−16.70, −1.60) | −9.15 (−16.70, −1.60) |
-| Catastrophic medical spending | −4.48 (−8.26, −0.69) | −4.5; *CI to confirm* |
+| Lottery's effect on Medicaid enrollment | 24.1 (22.4, 25.9) | 24.1 (22.3, 25.9) |
+| Lottery's effect on exam response | 0.28 (p = 0.86) | 0.28 (p = 0.86) |
+| Effect of Medicaid on elevated blood pressure | −1.35 (−7.17, 4.48) | −1.33 (−7.16, 4.49) |
+| Effect of Medicaid on positive depression screen | −9.15 (−16.70, −1.60) | −9.15 (−16.70, −1.60) |
+| Effect of Medicaid on catastrophic medical spending | −4.48 (−8.26, −0.69) | −4.48 (−8.26, −0.69) |
 
-Control-group rates for depression (30.0%) and catastrophic spending (5.5%) match the published values.
+Control-group rates (16.3% elevated blood pressure, 30.0% depression, 5.5% catastrophic spending) also match. The blood pressure estimate differs from the published value by 0.02 points; the source of the gap is not identified.

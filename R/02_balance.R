@@ -128,8 +128,6 @@ plot_data <- balance_table %>%
                                         "Adjusted for household size")))
 
 balance_plot <- ggplot(plot_data, aes(x = std_diff, y = label, color = comparison)) +
-  annotate("rect", xmin = -0.1, xmax = 0.1, ymin = -Inf, ymax = Inf,
-           fill = "grey92") +
   geom_vline(xintercept = 0, color = "grey40") +
   geom_point(size = 2.6) +
   scale_color_manual(values = c("Raw comparison" = "#C8553D",
@@ -137,9 +135,8 @@ balance_plot <- ggplot(plot_data, aes(x = std_diff, y = label, color = compariso
   scale_x_continuous(limits = c(-0.25, 0.25)) +
   labs(
     title = "After accounting for household size,\nlottery winners and non-winners look alike",
-    subtitle = paste0("Standardized difference, winners minus non-winners. Households with more members on\n",
-                      "the lottery list had more chances to win; values inside the shaded band (-0.1 to 0.1)\n",
-                      "are conventionally considered negligible."),
+    subtitle = paste0("Standardized difference, winners minus non-winners. Households with more members\n",
+                      "on the lottery list had more chances to win."),
     x = "Standardized difference", y = NULL, color = NULL
   ) +
   theme_minimal(base_size = 11) +

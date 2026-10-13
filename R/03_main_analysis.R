@@ -96,10 +96,8 @@ effects_plot <- ggplot(plot_data, aes(x = effect, y = label)) +
             nudge_y = 0.32, size = 3.3, lineheight = 0.9, color = "grey20") +
   scale_color_manual(values = c(`TRUE` = "#2A6F97", `FALSE` = "grey55"), guide = "none") +
   labs(
-    title = "Medicaid reduced depression and financial catastrophe,\nbut not high blood pressure",
-    subtitle = paste0("Effect of Medicaid coverage, percentage points, with 95% confidence intervals.\n",
-                      "Labels show the effect and the rate among lottery non-winners."),
-    x = "Change in percentage points", y = NULL
+    title = "Medicaid reduced depression and financial catastrophe,\nwith no detectable effect on high blood pressure",
+    x = "Effect of Medicaid coverage (percentage points, 95% CI)", y = NULL
   ) +
   theme_minimal(base_size = 11) +
   theme(panel.grid.minor = element_blank(), panel.grid.major.y = element_blank(),
