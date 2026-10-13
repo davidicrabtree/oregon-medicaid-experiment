@@ -26,8 +26,8 @@ Effect of Medicaid coverage (two-stage least squares, lottery as instrument), pe
 | Outcome | This analysis | Baicker et al. (2013) |
 |---|---|---|
 | Lottery's effect on Medicaid enrollment | 24.1 | *to confirm (Table 2)* |
-| Elevated blood pressure | −1.35 (−7.18, 4.49) | not significant; *exact estimate to confirm* |
-| Positive depression screen | −9.15 (−16.71, −1.59) | −9.15 (−16.70, −1.60) |
+| Elevated blood pressure | −1.35 (−7.17, 4.48) | not significant; *exact estimate to confirm* |
+| Positive depression screen | −9.15 (−16.70, −1.60) | −9.15 (−16.70, −1.60) |
 | Catastrophic medical spending | −4.48 (−8.26, −0.69) | −4.5; *CI to confirm* |
 
 Control-group rates for depression (30.0%) and catastrophic spending (5.5%) match the published values.
