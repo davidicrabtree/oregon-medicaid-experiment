@@ -15,7 +15,7 @@ library(estimatr)
 library(here)
 
 ohie <- read_rds(here("data", "processed", "ohie_analysis.rds"))
-main <- read_csv(here("output", "tables", "main_effects.csv"), show_col_types = FALSE)
+main <- read_csv(here("output", "r", "tables", "main_effects.csv"), show_col_types = FALSE)
 
 alpha <- 0.05
 target_power <- 0.80
@@ -100,9 +100,9 @@ precision <- map_dfr(main$outcome, compare_precision) %>%
 
 # Output ----------------------------------------------------------------------------------------
 
-write_csv(power_summary, here("output", "tables", "power_summary.csv"))
-write_csv(sample_size_needed, here("output", "tables", "sample_size_needed.csv"))
-write_csv(precision, here("output", "tables", "covariate_adjustment.csv"))
+write_csv(power_summary, here("output", "r", "tables", "power_summary.csv"))
+write_csv(sample_size_needed, here("output", "r", "tables", "sample_size_needed.csv"))
+write_csv(precision, here("output", "r", "tables", "covariate_adjustment.csv"))
 
 curve_plot <- ggplot(power_curve, aes(x = effect * 100, y = power)) +
   annotate("rect", xmin = abs(bp$rules_out_beyond) * 100, xmax = Inf, ymin = -Inf, ymax = Inf,
@@ -130,5 +130,5 @@ curve_plot <- ggplot(power_curve, aes(x = effect * 100, y = power)) +
   theme_minimal(base_size = 11) +
   theme(panel.grid.minor = element_blank(), plot.title.position = "plot")
 
-ggsave(here("output", "figures", "power_curve.png"), curve_plot,
+ggsave(here("output", "r", "figures", "power_curve.png"), curve_plot,
        width = 7, height = 4.5, dpi = 300, bg = "white")

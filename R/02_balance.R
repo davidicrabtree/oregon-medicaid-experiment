@@ -106,7 +106,7 @@ joint <- joint_test(joint_model, names(covariates)) %>%
 
 # Output ----------------------------------------------------------------------------------------
 
-write_csv(balance_table, here("output", "tables", "balance.csv"))
+write_csv(balance_table, here("output", "r", "tables", "balance.csv"))
 write_csv(
   tibble(
     rate_control  = response_rates$response_rate[response_rates$treatment == 0],
@@ -114,9 +114,9 @@ write_csv(
     diff_adjusted = coef(response)[["treatment"]],
     p_value       = response$p.value[["treatment"]]
   ),
-  here("output", "tables", "response_rates.csv")
+  here("output", "r", "tables", "response_rates.csv")
 )
-write_csv(joint, here("output", "tables", "balance_joint_test.csv"))
+write_csv(joint, here("output", "r", "tables", "balance_joint_test.csv"))
 
 plot_data <- balance_table %>%
   select(label, unadjusted = std_diff_unadjusted, adjusted = std_diff_adjusted) %>%
@@ -144,5 +144,5 @@ balance_plot <- ggplot(plot_data, aes(x = std_diff, y = label, color = compariso
         panel.grid.minor = element_blank(), panel.grid.major.y = element_blank(),
         plot.title.position = "plot")
 
-ggsave(here("output", "figures", "balance.png"), balance_plot,
+ggsave(here("output", "r", "figures", "balance.png"), balance_plot,
        width = 7, height = 5.5, dpi = 300, bg = "white")

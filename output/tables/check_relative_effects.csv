@@ -1,0 +1,3 @@
+outcome,paper_claim,control_rate,relative_reduction,relative_low,relative_high
+depression,Relative reduction of 30%,0.3002475658694001,0.3047382086146446,0.05316566733969637,0.5563107498895925
+catastrophic_spending,Nearly eliminated; relative reduction of more than 80%,0.0551399253308773,0.8116589482452449,0.1256610976336474,1.0

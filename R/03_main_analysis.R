@@ -78,9 +78,9 @@ write_csv(
          first_stage_se   = first_stage_fit$std.error[["treatment"]],
          f_stat           = (coef(first_stage_fit)[["treatment"]] /
                                first_stage_fit$std.error[["treatment"]])^2),
-  here("output", "tables", "first_stage.csv")
+  here("output", "r", "tables", "first_stage.csv")
 )
-write_csv(results, here("output", "tables", "main_effects.csv"))
+write_csv(results, here("output", "r", "tables", "main_effects.csv"))
 
 plot_data <- results %>%
   mutate(across(c(control_mean, effect, effect_low, effect_high), ~ .x * 100),
@@ -103,5 +103,5 @@ effects_plot <- ggplot(plot_data, aes(x = effect, y = label)) +
   theme(panel.grid.minor = element_blank(), panel.grid.major.y = element_blank(),
         plot.title.position = "plot")
 
-ggsave(here("output", "figures", "main_effects.png"), effects_plot,
+ggsave(here("output", "r", "figures", "main_effects.png"), effects_plot,
        width = 7, height = 4.5, dpi = 300, bg = "white")
