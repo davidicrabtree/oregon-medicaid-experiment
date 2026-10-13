@@ -1,0 +1,25 @@
+# Data: NBER public-use files are distributed under a data-use agreement.
+# Download them yourself (see README) rather than from this repository.
+data/raw/
+data/processed/
+
+# NBER documentation and the authors' replication code (kept locally for reference)
+reference/
+
+# R / RStudio
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# Python
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+
+# Quarto
+/.quarto/
+*_files/
+
+# macOS
+.DS_Store
