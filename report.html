@@ -2223,7 +2223,7 @@ vertical-align: -.125em;
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">Summary</h2>
 <p>In 2008, Oregon could afford to expand Medicaid to only some of the low-income adults who wanted it, so it held a lottery. Because winners were chosen at random, the Oregon Health Insurance Experiment is one of the few randomized tests of what health insurance does. Its best-known clinical results, published by Baicker et al. in the <em>New England Journal of Medicine</em> in 2013, found that Medicaid reduced depression and financial hardship but produced “no significant improvements in measured physical health outcomes.”</p>
-<p>I rebuilt the analysis from the public-use data, reproducing every headline estimate in the paper, and then examined how well the evidence supports the way those results are described. <strong>Power analyses suggest that some important claims in the paper may be overstated. Moreover, the authors’ summary language applies a more lenient standard to financial expenditures and depression - where effects are present - than to physical health, where the non-significant results were described in terms of uncertainty.</strong></p>
+<p>I rebuilt the analysis from the public-use data, reproducing every headline estimate in the paper, and then examined how well the evidence supports the way those results are described. <strong>Some of the paper’s summary claims go further than its evidence. The physical-health null comes from a study too small to detect moderate effects, while the positive findings for depression and financial strain are described by their point estimates rather than their much wider confidence intervals, a more lenient standard than the paper applies to its null results.</strong></p>
 <ol type="1">
 <li><strong>The blood pressure “null” cannot distinguish no effect from a meaningful one.</strong> The study had a 67% chance of detecting a reduction the authors themselves call clinically significant, and 80% power only for reductions of at least 8.3 points, about half the baseline rate. Its 95% confidence interval runs from a 44% reduction to a 27% increase.</li>
 <li><strong>The positive findings are stated more precisely than the data allow.</strong> “Nearly eliminated” catastrophic medical spending describes a point estimate whose 95% confidence interval is consistent with a reduction as small as 13%. The “30% reduction” in depression has an interval running from 5% to 56%.</li>
@@ -2244,7 +2244,7 @@ vertical-align: -.125em;
 </section>
 <section id="what-medicaid-did" class="level2">
 <h2 class="anchored" data-anchor-id="what-medicaid-did">What Medicaid did</h2>
-<div id="5970bfaf" class="cell" data-execution_count="2">
+<div id="3ae99a12" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="2">
 <table class="caption-top table table-sm table-striped small">
 <colgroup>
@@ -2297,7 +2297,7 @@ vertical-align: -.125em;
 </section>
 <section id="a-misstated-definition" class="level3">
 <h3 class="anchored" data-anchor-id="a-misstated-definition">A misstated definition</h3>
-<div id="0ce8df6a" class="cell" data-execution_count="3">
+<div id="ad74e8ad" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="3">
 <table class="caption-top table table-sm table-striped small">
 <colgroup>
@@ -2333,7 +2333,7 @@ vertical-align: -.125em;
 <section id="could-better-analysis-recover-the-lost-precision" class="level2">
 <h2 class="anchored" data-anchor-id="could-better-analysis-recover-the-lost-precision">Could better analysis recover the lost precision?</h2>
 <p>In A/B testing, adjusting for characteristics measured before treatment is a standard way to tighten estimates. I re-estimated each effect adding sex, age, race, ethnicity, language, and lottery sign-up characteristics as controls.</p>
-<div id="e82401fe" class="cell" data-execution_count="4">
+<div id="d054c4dc" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="4">
 <table class="caption-top table table-sm table-striped small">
 <colgroup>
