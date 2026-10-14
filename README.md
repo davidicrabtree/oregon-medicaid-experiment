@@ -1,17 +1,17 @@
 # What Did Medicaid Do? Re-examining the Oregon Health Insurance Experiment
 
-In 2008, Oregon expanded Medicaid by lottery, creating one of the few randomized tests of what health insurance does. This project rebuilds the experiment's best-known clinical analysis (Baicker et al. 2013, *New England Journal of Medicine*) from the public-use data, reproduces its headline estimates, and examines how well the evidence supports the way those results are described.
+In 2008, Oregon expanded Medicaid by lottery, creating one of the few randomized tests of the effect of health insurance. This project rebuilds the experiment's best-known clinical analysis (Baicker et al. 2013, *New England Journal of Medicine*) from the public-use data, reproduces its headline estimates, and examines how well the evidence supports the way those results are described.
 
 **Read the write-up:** [report.html](report.html) · [report.pdf](report.pdf)
 
 ## Findings
 
-**Some of the paper's summary claims go further than its evidence. The physical-health null comes from a study too small to detect moderate effects, while the positive findings for depression and financial strain are described by their point estimates rather than their much wider confidence intervals, a more lenient standard than the paper applies to its null results.**
+**Some of the paper's summary claims go further than its evidence.** The physical-health null comes from a study too small to detect moderate effects, while the positive findings for depression and financial strain are described by their point estimates rather than their much wider confidence intervals, a more lenient standard than the paper applies to its null results.
 
-1. **The blood pressure "null" cannot distinguish no effect from a meaningful one.** The study had a 67% chance of detecting a reduction the authors themselves call clinically significant, and 80% power only for reductions of at least 8.3 points, about half the baseline rate. Its 95% confidence interval runs from a 44% reduction to a 27% increase.
-2. **The positive findings are stated more precisely than the data allow.** "Nearly eliminated" catastrophic medical spending describes a point estimate whose 95% confidence interval is consistent with a reduction as small as 13%. The "30% reduction" in depression has an interval running from 5% to 56%.
-3. **The paper's definition of elevated blood pressure is misstated.** Table 2's footnote requires systolic pressure of at least 140 *and* diastolic of at least 90 mm Hg; the published results use *or*. Under the stated definition, 7.0% of the control group would have elevated blood pressure, not the reported 16.3%.
-4. **Covariate adjustment cannot recover the lost precision.** Pre-lottery characteristics explain 1–8% of outcome variation and shrink standard errors by about 1%.
+1. The blood pressure "null" cannot distinguish no effect from a meaningful one. The study had a 67% chance of detecting a reduction the authors themselves call clinically significant, and 80% power only for reductions of at least 8.3 points, about half the baseline rate. Its 95% confidence interval runs from a 44% reduction to a 27% increase.
+2. The positive findings are stated more precisely than the data allow. "Nearly eliminated" catastrophic medical spending describes a point estimate whose 95% confidence interval is consistent with a reduction as small as 13%. The "30% reduction" in depression has an interval running from 5% to 56%.
+3. The paper's definition of elevated blood pressure is misstated. Table 2's footnote requires systolic pressure of at least 140 *and* diastolic of at least 90 mm Hg; the published results use *or*. Under the stated definition, 7.0% of the control group would have elevated blood pressure, not the reported 16.3%.
+4. Covariate adjustment cannot recover the lost precision. Pre-lottery characteristics explain 1–8% of outcome variation and shrink standard errors by about 1%.
 
 ## Replication
 
