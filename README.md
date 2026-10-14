@@ -13,20 +13,6 @@ In 2008, Oregon expanded Medicaid by lottery, creating one of the few randomized
 3. The paper's definition of elevated blood pressure is misstated. Table 2's footnote requires systolic pressure of at least 140 *and* diastolic of at least 90 mm Hg; the published results use *or*. Under the stated definition, 7.0% of the control group would have elevated blood pressure, not the reported 16.3%.
 4. Covariate adjustment cannot recover the lost precision. Pre-lottery characteristics explain 1–8% of outcome variation and shrink standard errors by about 1%.
 
-## Replication
-
-Percentage points, with 95% confidence intervals. Published values are from the paper's text and Tables 2 and 4.
-
-| Estimate | This analysis | Baicker et al. (2013) |
-|---|---|---|
-| Lottery's effect on Medicaid enrollment | 24.1 (22.4, 25.9) | 24.1 (22.3, 25.9) |
-| Lottery's effect on exam response | 0.28 (p = 0.86) | 0.28 (p = 0.86) |
-| Effect of Medicaid on elevated blood pressure | −1.35 (−7.17, 4.48) | −1.33 (−7.16, 4.49) |
-| Effect of Medicaid on positive depression screen | −9.15 (−16.70, −1.60) | −9.15 (−16.70, −1.60) |
-| Effect of Medicaid on catastrophic medical spending | −4.48 (−8.26, −0.69) | −4.48 (−8.26, −0.69) |
-
-The blood pressure estimate differs from the published value by 0.02 points; the source of the gap is not identified.
-
 ## Project structure
 
 ```
