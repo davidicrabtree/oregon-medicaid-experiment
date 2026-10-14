@@ -62,7 +62,7 @@ bp_main = main.loc["hypertension"]
 
 In 2008, Oregon could afford to expand Medicaid to only some of the low-income adults who wanted it, so it held a lottery. Because winners were chosen at random, the Oregon Health Insurance Experiment is one of the few randomized tests of what health insurance does. Its best-known clinical results, published by Baicker et al. in the *New England Journal of Medicine* in 2013, found that Medicaid reduced depression and financial hardship but produced "no significant improvements in measured physical health outcomes."
 
-I rebuilt the analysis from the public-use data, reproducing every headline estimate in the paper, and then examined how well the evidence supports the way those results are described. **The estimates hold up; the summary language does not always.**
+I rebuilt the analysis from the public-use data, reproducing every headline estimate in the paper, and then examined how well the evidence supports the way those results are described. **Power analyses suggest that some important claims in the paper may be overstated. Moreover, the authors' summary language applies a more lenient standard to financial expenditures and depression - where effects are present - than to physical health, where the non-significant results were described in terms of uncertainty.**
 
 1. **The blood pressure "null" cannot distinguish no effect from a meaningful one.** The study had a `{python} pct(clinical.power)` chance of detecting a reduction the authors themselves call clinically significant, and 80% power only for reductions of at least `{python} pts(bp.mde, 1)` points, about half the baseline rate. Its 95% confidence interval runs from a `{python} pct(-bp_main.effect_low / bp_main.control_mean)` reduction to a `{python} pct(bp_main.effect_high / bp_main.control_mean)` increase.
 2. **The positive findings are stated more precisely than the data allow.** "Nearly eliminated" catastrophic medical spending describes a point estimate whose 95% confidence interval is consistent with a reduction as small as `{python} pct(cat.relative_low)`. The "30% reduction" in depression has an interval running from `{python} pct(dep.relative_low)` to `{python} pct(dep.relative_high)`.
@@ -106,7 +106,7 @@ Having Medicaid reduced positive depression screens by `{python} reduction("depr
 
 ### A null result from a study too small to detect it
 
-The original authors acknowledge that their power to detect changes in physical health was limited, and note that their confidence interval includes a clinically significant 7.16-point reduction in hypertension. The power curve below makes that caveat concrete.
+The original authors acknowledge that their power to detect changes in physical health was limited, and note that their confidence interval includes a clinically significant 7.16-point reduction in hypertension. Below I analyze precisely what magnitude of effects the authors were capable of capturing.
 
 ![](output/figures/power_curve.png){width=85%}
 
@@ -134,7 +134,7 @@ Table 2 of the paper defines elevated blood pressure as systolic pressure of at 
 
 ## Could better analysis recover the lost precision?
 
-In A/B testing, adjusting for characteristics measured before treatment is a standard way to tighten estimates (e.g., CUPED). I re-estimated each effect adding sex, age, race, ethnicity, language, and lottery sign-up characteristics as controls.
+In A/B testing, adjusting for characteristics measured before treatment is a standard way to tighten estimates. I re-estimated each effect adding sex, age, race, ethnicity, language, and lottery sign-up characteristics as controls.
 
 ```{python}
 Markdown(pd.DataFrame({
@@ -144,7 +144,7 @@ Markdown(pd.DataFrame({
 }).to_markdown(index=False))
 ```
 
-It barely helps. Standard errors shrink by at most about 1%, because the available covariates explain only `{python} pct(precision.covariate_r2.min())`–`{python} pct(precision.covariate_r2.max())` of the variation in outcomes. Adjustment pays off when a covariate strongly predicts the outcome, typically a measurement of the outcome itself before treatment. The study never measured participants' blood pressure before the lottery, and no demographic substitute can make up for it.
+It barely helps. Standard errors shrink by at most about 1%, because the available covariates explain only `{python} pct(precision.covariate_r2.min())`–`{python} pct(precision.covariate_r2.max())` of the variation in outcomes. Adjustment pays off when a covariate strongly predicts the outcome, typically a measurement of the outcome itself before treatment. The study never measured participants' blood pressure before the lottery, and no demographic characteristic sufficiently substitutes for it.
 
 ## Limitations
 
