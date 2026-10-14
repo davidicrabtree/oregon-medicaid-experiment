@@ -2,7 +2,7 @@
 
 In 2008, Oregon expanded Medicaid by lottery, creating one of the few randomized tests of the effect of health insurance. This project rebuilds the experiment's best-known clinical analysis (Baicker et al. 2013, *New England Journal of Medicine*) from the public-use data, reproduces its headline estimates, and examines how well the evidence supports the way those results are described.
 
-**Read the write-up:** [report.html](report.html) · [report.pdf](report.pdf)
+**Read the write-up:** [report.html](https://davidicrabtree.github.io/oregon-medicaid-experiment/report.html) · [report.pdf](https://davidicrabtree.github.io/oregon-medicaid-experiment/report.pdf)
 
 ## Findings
 
