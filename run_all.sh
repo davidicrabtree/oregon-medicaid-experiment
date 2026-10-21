@@ -6,7 +6,10 @@ set -euo pipefail
 cd "$(dirname "$0")"
 
 if [[ "${1:-}" == "--with-r" ]]; then
-  for script in R/0*.R; do Rscript "$script"; done
+  # The Windows R installer doesn't put Rscript on PATH, so fall back to the newest installed R.
+  RSCRIPT=$(command -v Rscript || ls -d "/c/Program Files/R"/R-*/bin/Rscript.exe 2>/dev/null | sort -V | tail -1 || true)
+  [[ -n "$RSCRIPT" ]] || { echo "Rscript not found: install R from https://cran.r-project.org" >&2; exit 1; }
+  for script in R/0*.R; do "$RSCRIPT" "$script"; done
 fi
 
 # The virtual environment keeps its programs in bin/ on Mac and Linux, Scripts/ on Windows.
