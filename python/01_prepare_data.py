@@ -58,6 +58,7 @@ invited = (
 
 assert len(invited) == 20745 and invited["person_id"].is_unique
 
+PROCESSED.mkdir(parents=True, exist_ok=True)
 invited[["person_id", "household_id", "treatment", "hh_size", "responded", "weight"]].to_parquet(
     PROCESSED / "ohie_invited.parquet", index=False)
 
